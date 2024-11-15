@@ -1,0 +1,85 @@
+.block {
+    position: fixed;
+    left: 64px;
+    bottom: 64px;
+    z-index: 1000;
+}
+
+.body {
+    width: 280px;
+    min-width: 300px;
+    min-height: 80px;
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    transform: transformX(-1000px);
+    overflow: hidden;
+}
+
+.head {
+    width: 32px;
+    height: 32px;
+    background: #000;
+}
+
+
+.loader_wrap {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    opacity: 0;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    zoom: .8;
+    animation: l5 1s infinite linear alternate;
+}
+
+@keyframes l5 {
+    0% {
+        box-shadow: 20px 0 #000, -20px 0 #0002;
+        background: #000;
+    }
+
+    33% {
+        box-shadow: 20px 0 #000, -20px 0 #0002;
+        background: #0002;
+    }
+
+    66% {
+        box-shadow: 20px 0 #0002, -20px 0 #000;
+        background: #0002;
+    }
+
+    100% {
+        box-shadow: 20px 0 #0002, -20px 0 #000;
+        background: #000;
+    }
+}
+
+
+.content {
+    opacity: 0;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.content {
+    color: #000;
+}
+
+.slider {
+    width: 100%;
+    max-width: 300px;
+    margin: 16px 0;
+    transition: all .3s linear;
+}
