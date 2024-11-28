@@ -2,7 +2,7 @@ import { FC, memo } from 'react';
 import Kolobok from '../../components/kolobok';
 import styles from './Onboard.module.scss';
 import { useScreenSize } from '../../hooks';
-import { useLogic } from './hooks/useLogic';
+import { useLogic } from './hooks';
 
 interface OnboardProps {
     isLogin: boolean;
